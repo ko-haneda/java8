@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-
 public class ArraySort
 {
 	public List<String> sort(String[] words) {
@@ -21,8 +20,8 @@ public class ArraySort
 	//呼び出されたスレッドで実行される。
 	public static void main(String[] args) {
 		System.out.println(Thread.currentThread());
-		String[] strs = {"cde", "abc", "bcd", "dkd", "grij", "fffl"};
-		 List<String> list = new ArraySort().sort(strs);
-		 list.forEach(System.out::println);
+		String[] strs = { "cde", "abc", "bcd", "dkd", "grij", "fffl" };
+		List<String> list = new ArraySort().sort(strs);
+		list.forEach(System.out::println);
 	}
 }

@@ -10,6 +10,7 @@ import org.junit.Test;
 public class SubDirectoryTest {
 
 	public static File file = new File("./src/ch01/ex03/testSample");
+
 	@Test
 	public void testGetSubDirectory() {
 		List<File> result = new SubDirectory().getSubDirectory(file, ".txt");
@@ -17,6 +18,5 @@ public class SubDirectoryTest {
 		result.forEach(f -> assertTrue(!f.isDirectory()));
 		result.forEach(System.out::println);
 	}
-
 
 }
