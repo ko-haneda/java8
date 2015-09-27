@@ -41,13 +41,20 @@ public class TranceformerImage extends Application {
 
 	public void start(Stage arg0) throws Exception {
 		Image in = new Image("file:./src/ch03/ex13/sample.png");
+//		PixelWindow sobel = (x, y, window) ->{
+//			double r = (window[0][0].getRed() + 2 * window[0][1].getRed() + window[0][2].getRed() - 
+//						 window[2][0].getRed() - 2 * window[2][1].getRed() - window[2][2].getRed()) + 0.2;
+//			double g = (window[0][0].getGreen() + 2 * window[0][1].getGreen() + window[0][2].getGreen() - 
+//					     window[2][0].getGreen() - 2 * window[2][1].getGreen() - window[2][2].getGreen()) + 0.2;
+//			double b = (window[0][0].getBlue() + 2 * window[0][1].getBlue() + window[0][2].getBlue() - 
+//					     window[2][0].getBlue() - 2 * window[2][1].getBlue() - window[2][2].getBlue()) + 0.2;
 		PixelWindow sobel = (x, y, window) ->{
-			double r = (window[0][0].getRed() + 2 * window[0][1].getRed() + window[0][2].getRed() - 
-						 window[2][0].getRed() - 2 * window[2][1].getRed() - window[2][2].getRed()) + 0.2;
-			double g = (window[0][0].getGreen() + 2 * window[0][1].getGreen() + window[0][2].getGreen() - 
-					     window[2][0].getGreen() - 2 * window[2][1].getGreen() - window[2][2].getGreen()) + 0.2;
-			double b = (window[0][0].getBlue() + 2 * window[0][1].getBlue() + window[0][2].getBlue() - 
-					     window[2][0].getBlue() - 2 * window[2][1].getBlue() - window[2][2].getBlue()) + 0.2;
+			double r = (4 * window[1][1].getRed() - window[1][0].getRed() - window[0][1].getRed() - 
+						 window[2][1].getRed() - window[1][2].getRed());
+			double g = (4 * window[1][1].getGreen() - window[1][0].getGreen() - window[0][1].getGreen() - 
+					 window[2][1].getGreen() - window[1][2].getGreen());
+			double b = (4 * window[1][1].getBlue() - window[1][0].getBlue() - window[0][1].getBlue() - 
+					 window[2][1].getBlue() - window[1][2].getBlue());
 			r = ((r < 0)? 0 : r);
 			g = ((g < 0)? 0 : g);
 			b = ((b < 0)? 0 : b);
