@@ -1,0 +1,12 @@
+{
+  "data":[
+    {"type":"A3_V", "papers":13},
+    {"type":"A3_H", "papers":48},
+    {"type":"A4_V", "papers":34},
+    {"type":"A4_H", "papers":53},
+    {"type":"B4_V", "papers":13},
+    {"type":"B4_H", "papers":60},
+    {"type":"B5_V", "papers":45},
+    {"type":"B5_H", "papers":43}
+  ]
+}
